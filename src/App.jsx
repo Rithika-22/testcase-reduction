@@ -25,7 +25,7 @@ const App = () => {
     formData.append("file", file);
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/upload", {
+      const response = await fetch("https://testcase-reduction-2-production.up.railway.app/upload", {
         method: "POST",
         body: formData,
       });
@@ -59,7 +59,10 @@ const App = () => {
       </form>
       
       {downloadReady && (
-        <a href="http://127.0.0.1:5000/download" className="download-btn">
+        <a
+          href="https://testcase-reduction-2-production.up.railway.app/download"
+          className="download-btn"
+        >
           <FaDownload size={20} /> Download Selected Test Cases
         </a>
       )}
